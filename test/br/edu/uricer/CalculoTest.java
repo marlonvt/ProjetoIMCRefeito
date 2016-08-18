@@ -12,7 +12,7 @@ public class CalculoTest {
     public void testHomemAbaixoDoPeso() {        
         Calculo calculo = new Calculo("M", 1.90, 50);
         
-        int esperado = 0;
+        int esperado = Calculo.ABAIXO_DO_PESO;
         int resultado = calculo.calcular();
         
         assertEquals(esperado, resultado);
@@ -23,7 +23,7 @@ public class CalculoTest {
     public void testHomemNoPesoIdeal() {        
         Calculo calculo = new Calculo("M", 1.70, 70);
         
-        int esperado = 1;
+        int esperado = Calculo.PESO_IDEAL;
         int resultado = calculo.calcular();
         
         assertEquals(esperado, resultado);
@@ -34,7 +34,7 @@ public class CalculoTest {
     public void testHomemAcimaDoPeso() {        
         Calculo calculo = new Calculo("M", 1.50, 90);
         
-        int esperado = 2;
+        int esperado = Calculo.ACIMA_DO_PESO;
         int resultado = calculo.calcular();
         
         assertEquals(esperado, resultado);
@@ -46,7 +46,7 @@ public class CalculoTest {
     public void testMulherAbaixoDoPeso() {        
         Calculo calculo = new Calculo("F", 1.90, 40);
         
-        int esperado = 0;
+        int esperado = Calculo.ABAIXO_DO_PESO;
         int resultado = calculo.calcular();
         
         assertEquals(esperado, resultado);
@@ -57,7 +57,7 @@ public class CalculoTest {
     public void testMulherPesoideal() {        
         Calculo calculo = new Calculo("F", 1.70, 65);
         
-        int esperado = 1;
+        int esperado = Calculo.PESO_IDEAL;
         int resultado = calculo.calcular();
         
         assertEquals(esperado, resultado);
@@ -67,7 +67,7 @@ public class CalculoTest {
     public void testMulherAcimaDoPeso() {        
         Calculo calculo = new Calculo("F", 1.50, 90);
         
-        int esperado = 2;
+        int esperado = Calculo.ACIMA_DO_PESO;
         int resultado = calculo.calcular();
         
         assertEquals(esperado, resultado);
